@@ -7,89 +7,114 @@
 
     <title>My Profile</title>
 
+    <!-- External CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body id="top">
 
-    <!-- Header -->
+    <!-- =========================
+         HEADER
+         ========================= -->
     <header class="site-header">
+
         <h1>Malik M Abdullah</h1>
 
         <nav>
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
             <a href="#timeline">Timeline</a>
+            <a href="#media">Media</a>
             <a href="#contact">Contact</a>
         </nav>
+
     </header>
 
 
+    <!-- =========================
+         MAIN CONTENT
+         ========================= -->
     <main>
 
-        <!-- About Section -->
+        <!-- About Me -->
         <article id="about" class="card">
 
             <h2>About Me</h2>
 
             <figure>
+
                 <img
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBB4LQTn0vRq4ydPLp-uTj_lEUHOHYWUU18JlCq5KuMw&s=10"
-                    alt="Photo of Malik M Abdullah"
-                >
+                    alt="Photo of Malik M Abdullah">
 
-                <figcaption>That's me!</figcaption>
+                <figcaption>
+                    That's me!
+                </figcaption>
+
             </figure>
 
             <p>
                 Hi there! My name is Malik M Abdullah.
-                I am a computer science student passionate about web development,
-                open-source projects, and learning how to build clean,
-                accessible user interfaces.
+                I am a computer science student passionate about
+                web development, open-source projects, and learning
+                how to build clean, accessible user interfaces.
             </p>
+
+            <blockquote>
+                <p>
+                    "The best way to learn is by building."
+                </p>
+            </blockquote>
 
         </article>
 
 
-        <!-- Skills Section -->
+        <!-- =========================
+             SKILLS
+             ========================= -->
         <section id="skills" class="card">
 
             <h2>Skills Building</h2>
 
             <ul class="tags">
-                <li>HTML5 semantic markup</li>
-                <li>CSS3 layout</li>
-                <li>GitHub collaboration</li>
-                <li>JavaScript fundamentals</li>
-                <li>Responsive web design</li>
+
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Java</li>
+                <li>Git</li>
+                <li>Problem Solving</li>
+
             </ul>
 
         </section>
 
 
-        <!-- Timeline Section -->
+        <!-- =========================
+             TIMELINE
+             ========================= -->
         <section id="timeline" class="card">
 
-            <h2>My Timeline So Far</h2>
+            <h2>My Timeline</h2>
 
-            <ol>
-                <li>
-                    Completed Lab 1: set up my environment and pushed to GitHub
-                </li>
+            <ul>
 
-                <li>
-                    Built my first static webpage
-                </li>
+                <li>Started learning programming</li>
 
-                <li>
-                    Started this semantic HTML5 profile page
-                </li>
-            </ol>
+                <li>Learned Java basics</li>
+
+                <li>Started web development</li>
+
+                <li>Working on CIT331 Web Technologies</li>
+
+            </ul>
 
         </section>
 
 
-        <!-- Fun Fact -->
+        <!-- =========================
+             FUN FACT
+             ========================= -->
         <aside class="card fun-fact">
 
             <h2>Fun Fact</h2>
@@ -101,7 +126,9 @@
         </aside>
 
 
-        <!-- Media Section -->
+        <!-- =========================
+             MEDIA
+             ========================= -->
         <section id="media" class="card">
 
             <h2>Media</h2>
@@ -114,226 +141,138 @@
 
             <p>
                 <strong>Transcript summary:</strong>
-                A 30-second introduction where I talk about why I'm taking this course.
+                This section contains a video related to learning
+                and technology.
             </p>
 
         </section>
 
 
-        <!-- Contact Section -->
+        <!-- =========================
+             CONTACT FORM
+             ========================= -->
         <section id="contact" class="card">
 
             <h2>Contact Form</h2>
 
             <form id="contact-form" action="#" method="POST">
 
-                <table border="1" cellpadding="8" cellspacing="0">
+                <fieldset>
 
-                    <!-- Full Name -->
-                    <tr>
-                        <td>
-                            <label for="name">Full Name:</label>
-                        </td>
-
-                        <td>
-                            <input
-                                type="text"
-                                id="name"
-                                name="name"
-                                pattern="[A-Za-z ]+"
-                                required
-                                placeholder="NAME"
-                            >
-                        </td>
-                    </tr>
+                    <legend>Send me a message</legend>
 
 
-                    <!-- Age -->
-                    <tr>
-                        <td>
-                            <label for="age">Age:</label>
-                        </td>
+                    <!-- Name -->
+                    <div class="field">
 
-                        <td>
-                            <input
-                                type="number"
-                                id="age"
-                                name="age"
-                                min="0"
-                                max="120"
-                                placeholder="18"
-                            >
-                        </td>
-                    </tr>
+                        <label for="name">
+                            Name:
+                        </label>
 
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            required>
 
-                    <!-- Date of Birth -->
-                    <tr>
-                        <td>
-                            <label for="dob">Date of Birth:</label>
-                        </td>
-
-                        <td>
-                            <input
-                                type="date"
-                                id="dob"
-                                name="dob"
-                                required
-                            >
-                        </td>
-                    </tr>
-
-
-                    <!-- Gender -->
-                    <tr>
-                        <td>
-                            <label>Gender:</label>
-                        </td>
-
-                        <td>
-                            <input
-                                type="radio"
-                                id="male"
-                                name="gender"
-                                value="Male"
-                                required
-                            >
-                            <label for="male">Male</label>
-
-                            <input
-                                type="radio"
-                                id="female"
-                                name="gender"
-                                value="Female"
-                            >
-                            <label for="female">Female</label>
-
-                            <input
-                                type="radio"
-                                id="other"
-                                name="gender"
-                                value="Other"
-                            >
-                            <label for="other">Other</label>
-                        </td>
-                    </tr>
+                    </div>
 
 
                     <!-- Email -->
-                    <tr>
-                        <td>
-                            <label for="email">Email Address:</label>
-                        </td>
+                    <div class="field">
 
-                        <td>
+                        <label for="email">
+                            Email:
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            required>
+
+                    </div>
+
+
+                    <!-- Subject -->
+                    <div class="field">
+
+                        <label for="subject">
+                            Subject:
+                        </label>
+
+                        <input
+                            type="text"
+                            id="subject"
+                            name="subject">
+
+                    </div>
+
+
+                    <!-- Message -->
+                    <div class="field">
+
+                        <label for="message">
+                            Message:
+                        </label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="5"
+                            required></textarea>
+
+                    </div>
+
+
+                    <!-- Gender -->
+                    <div class="radio-group">
+
+                        <p>Gender:</p>
+
+                        <label>
                             <input
-                                type="email"
-                                id="email"
-                                name="email"
-                                required
-                                placeholder="example@mail.com"
-                            >
-                        </td>
-                    </tr>
+                                type="radio"
+                                name="gender"
+                                value="male">
 
+                            Male
+                        </label>
 
-                    <!-- Password -->
-                    <tr>
-                        <td>
-                            <label for="password">Password:</label>
-                        </td>
-
-                        <td>
+                        <label>
                             <input
-                                type="password"
-                                id="password"
-                                name="password"
-                                minlength="8"
-                                pattern="[A-Za-z0-9]{8}"
-                                required
-                                placeholder="At least 8 characters"
-                            >
-                        </td>
-                    </tr>
+                                type="radio"
+                                name="gender"
+                                value="female">
 
+                            Female
+                        </label>
 
-                    <!-- CNIC -->
-                    <tr>
-                        <td>
-                            <label for="cnic">CNIC Number:</label>
-                        </td>
-
-                        <td>
-                            <input
-                                type="text"
-                                id="cnic"
-                                name="cnic"
-                                pattern="\d{5}-\d{7}-\d{1}"
-                                required
-                                placeholder="00000-0000000-0"
-                            >
-                        </td>
-                    </tr>
-
-
-                    <!-- Phone -->
-                    <tr>
-                        <td>
-                            <label for="phone">Phone Number:</label>
-                        </td>
-
-                        <td>
-                            <input
-                                type="tel"
-                                id="phone"
-                                name="phone"
-                                pattern="03\d{9}"
-                                required
-                                placeholder="03000000000"
-                            >
-                        </td>
-                    </tr>
-
-
-                    <!-- Address -->
-                    <tr>
-                        <td>
-                            <label for="address">Address:</label>
-                        </td>
-
-                        <td>
-                            <textarea
-                                id="address"
-                                name="address"
-                                rows="4"
-                                cols="30"
-                                required
-                                placeholder="Enter address..."
-                            ></textarea>
-                        </td>
-                    </tr>
+                    </div>
 
 
                     <!-- Buttons -->
-                    <tr>
-                        <td colspan="2" align="center">
+                    <div class="form-buttons">
 
-                            <button
-                                type="submit"
-                                id="submit">
-                                Submit
-                            </button>
+                        <button
+                            type="submit"
+                            id="submit">
 
-                            <button
-                                type="button"
-                                id="clear-btn">
-                                Clear
-                            </button>
+                            Submit
 
-                        </td>
-                    </tr>
+                        </button>
 
-                </table>
+                        <button
+                            type="button"
+                            id="clear-btn">
+
+                            Clear
+
+                        </button>
+
+                    </div>
+
+                </fieldset>
 
             </form>
 
@@ -342,14 +281,25 @@
     </main>
 
 
-    <!-- Footer -->
+    <!-- =========================
+         FOOTER
+         ========================= -->
     <footer>
-        <p>&copy; 2026 Malik M Abdullah</p>
-        <p>Built for CIT331</p>
+
+        <p>
+            &copy; 2026 Malik M Abdullah
+        </p>
+
+        <p>
+            Built for CIT331
+        </p>
+
     </footer>
 
 
+    <!-- JavaScript -->
     <script src="script.js"></script>
 
 </body>
+
 </html>
