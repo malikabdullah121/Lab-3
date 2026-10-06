@@ -1,16 +1,25 @@
+/* =========================================
+   CIT331 LAB 3
+   TASK 1 + TASK 2
+   ========================================= */
+
+/* ======================================
+   TASK 1 - CSS FOUNDATION
+   ======================================= */
 
 
-
+/* Make width and height calculations easier */
 *, *::before, *::after {
     box-sizing: border-box;
 }
 
 
+/* Remove default body margin */
 body {
     margin: 0;
 }
 
-
+/* CSS Variables */
 :root {
     --brand: #1e56d6;
     --brand-dark: #0b1f3a;
@@ -26,10 +35,185 @@ body {
 }
 
 
+/* Basic page styling */
 body {
     font-family: "Segoe UI", Arial, sans-serif;
     font-size: 1rem;
     line-height: 1.6;
     color: var(--text);
     background: var(--bg);
+}
+
+
+/* =========================================
+   TASK 2 - SELECTORS & CASCADE
+   ========================================= */
+
+
+/* Group selector */
+h1,
+h2,
+h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: var(--brand-dark);
+    line-height: 1.2;
+}
+
+
+/* Element selector */
+h2 {
+    font-size: 1.5rem;
+    margin: 0 0 var(--space);
+}
+
+
+/* Class selector */
+.site-header {
+    background: var(--brand-dark);
+    color: #fff;
+    padding: var(--space) 24px;
+}
+
+
+/* Descendant + class selector */
+.site-header h1 {
+    color: #fff;
+    margin: 0;
+}
+
+
+/* Descendant selector */
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 4px 8px;
+}
+
+
+/* Class selector */
+.card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+}
+
+
+/* ID selector */
+#about {
+    border-left: 4px solid var(--brand);
+}
+
+
+/* Child selector */
+form > fieldset {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+
+
+/* Adjacent sibling selector */
+h2 + p {
+    margin-top: 0;
+}
+
+
+/* Adjacent sibling selector */
+label + input,
+label + select,
+label + textarea {
+    display: block;
+    width: 100%;
+    margin-top: 4px;
+}
+
+
+/* Required attribute selector */
+input[required],
+textarea[required] {
+    border-left: 4px solid var(--accent);
+}
+
+
+/* Type attribute selector */
+input[type="email"] {
+    background: #f0f6ff;
+}
+
+
+/* Transition */
+a,
+button {
+    transition: background 0.2s, color 0.2s;
+}
+
+
+/* Hover pseudo-class */
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* Navigation hover */
+nav a:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 6px;
+}
+
+
+/* Focus pseudo-class */
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 3px solid var(--brand);
+    outline-offset: 2px;
+}
+
+
+/* Even list items */
+.tags li:nth-child(even) {
+    background: #e7f7f1;
+}
+
+
+/* First timeline item */
+#timeline li:first-child {
+    font-weight: 700;
+}
+
+
+/* Last timeline item */
+#timeline li:last-child {
+    color: var(--accent);
+}
+
+
+/* Pseudo-element before heading */
+h2::before {
+    content: "\00BB\00A0";
+    color: var(--accent);
+}
+
+
+/* Pseudo-element before blockquote */
+blockquote::before {
+    content: "\201C";
+    font-size: 3rem;
+    line-height: 0;
+    vertical-align: -0.4em;
+    margin-right: 4px;
+    color: var(--accent);
+}
+
+
+/* External link selector */
+a[href^="http"]::after {
+    content: " (external)";
+    font-size: 0.8em;
+    color: var(--muted);
+}
+
+
+/* Text selection */
+::selection {
+    background: var(--brand);
+    color: #fff;
 }
