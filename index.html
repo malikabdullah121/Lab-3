@@ -7,6 +7,7 @@
 
     <title>My Profile</title>
 
+    <!-- External CSS file -->
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -14,6 +15,7 @@
 
     <!-- Header -->
     <header class="site-header">
+
         <h1>Malik M Abdullah</h1>
 
         <nav>
@@ -22,6 +24,7 @@
             <a href="#timeline">Timeline</a>
             <a href="#contact">Contact</a>
         </nav>
+
     </header>
 
 
@@ -47,6 +50,12 @@
                 open-source projects, and learning how to build clean,
                 accessible user interfaces.
             </p>
+
+            <blockquote>
+                <p>
+                    "The best way to learn is by building."
+                </p>
+            </blockquote>
 
         </article>
 
@@ -127,213 +136,202 @@
 
             <form id="contact-form" action="#" method="POST">
 
-                <table border="1" cellpadding="8" cellspacing="0">
+                <fieldset>
 
-                    <!-- Full Name -->
-                    <tr>
-                        <td>
-                            <label for="name">Full Name:</label>
-                        </td>
+                    <legend>Send me a message</legend>
 
-                        <td>
-                            <input
-                                type="text"
-                                id="name"
-                                name="name"
-                                pattern="[A-Za-z ]+"
-                                required
-                                placeholder="NAME"
-                            >
-                        </td>
-                    </tr>
+
+                    <!-- Name -->
+                    <div class="field">
+
+                        <label for="name">Full Name:</label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            pattern="[A-Za-z ]+"
+                            required
+                            placeholder="NAME"
+                        >
+
+                    </div>
 
 
                     <!-- Age -->
-                    <tr>
-                        <td>
-                            <label for="age">Age:</label>
-                        </td>
+                    <div class="field">
 
-                        <td>
-                            <input
-                                type="number"
-                                id="age"
-                                name="age"
-                                min="0"
-                                max="120"
-                                placeholder="18"
-                            >
-                        </td>
-                    </tr>
+                        <label for="age">Age:</label>
+
+                        <input
+                            type="number"
+                            id="age"
+                            name="age"
+                            min="0"
+                            max="120"
+                            placeholder="18"
+                        >
+
+                    </div>
 
 
                     <!-- Date of Birth -->
-                    <tr>
-                        <td>
-                            <label for="dob">Date of Birth:</label>
-                        </td>
+                    <div class="field">
 
-                        <td>
-                            <input
-                                type="date"
-                                id="dob"
-                                name="dob"
-                                required
-                            >
-                        </td>
-                    </tr>
+                        <label for="dob">Date of Birth:</label>
+
+                        <input
+                            type="date"
+                            id="dob"
+                            name="dob"
+                            required
+                        >
+
+                    </div>
 
 
                     <!-- Gender -->
-                    <tr>
-                        <td>
-                            <label>Gender:</label>
-                        </td>
+                    <div class="field">
 
-                        <td>
-                            <input
-                                type="radio"
-                                id="male"
-                                name="gender"
-                                value="Male"
-                                required
-                            >
-                            <label for="male">Male</label>
+                        <label>Gender:</label>
 
-                            <input
-                                type="radio"
-                                id="female"
-                                name="gender"
-                                value="Female"
-                            >
-                            <label for="female">Female</label>
+                        <div class="radio-group">
 
-                            <input
-                                type="radio"
-                                id="other"
-                                name="gender"
-                                value="Other"
-                            >
-                            <label for="other">Other</label>
-                        </td>
-                    </tr>
+                            <label>
+                                <input
+                                    type="radio"
+                                    id="male"
+                                    name="gender"
+                                    value="Male"
+                                    required
+                                >
+                                Male
+                            </label>
+
+                            <label>
+                                <input
+                                    type="radio"
+                                    id="female"
+                                    name="gender"
+                                    value="Female"
+                                >
+                                Female
+                            </label>
+
+                            <label>
+                                <input
+                                    type="radio"
+                                    id="other"
+                                    name="gender"
+                                    value="Other"
+                                >
+                                Other
+                            </label>
+
+                        </div>
+
+                    </div>
 
 
                     <!-- Email -->
-                    <tr>
-                        <td>
-                            <label for="email">Email Address:</label>
-                        </td>
+                    <div class="field">
 
-                        <td>
-                            <input
-                                type="email"
-                                id="email"
-                                name="email"
-                                required
-                                placeholder="example@mail.com"
-                            >
-                        </td>
-                    </tr>
+                        <label for="email">Email Address:</label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            required
+                            placeholder="example@mail.com"
+                        >
+
+                    </div>
 
 
                     <!-- Password -->
-                    <tr>
-                        <td>
-                            <label for="password">Password:</label>
-                        </td>
+                    <div class="field">
 
-                        <td>
-                            <input
-                                type="password"
-                                id="password"
-                                name="password"
-                                minlength="8"
-                                pattern="[A-Za-z0-9]{8}"
-                                required
-                                placeholder="At least 8 characters"
-                            >
-                        </td>
-                    </tr>
+                        <label for="password">Password:</label>
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            minlength="8"
+                            pattern="[A-Za-z0-9]{8}"
+                            required
+                            placeholder="At least 8 characters"
+                        >
+
+                    </div>
 
 
                     <!-- CNIC -->
-                    <tr>
-                        <td>
-                            <label for="cnic">CNIC Number:</label>
-                        </td>
+                    <div class="field">
 
-                        <td>
-                            <input
-                                type="text"
-                                id="cnic"
-                                name="cnic"
-                                pattern="\d{5}-\d{7}-\d{1}"
-                                required
-                                placeholder="00000-0000000-0"
-                            >
-                        </td>
-                    </tr>
+                        <label for="cnic">CNIC Number:</label>
+
+                        <input
+                            type="text"
+                            id="cnic"
+                            name="cnic"
+                            pattern="\d{5}-\d{7}-\d{1}"
+                            required
+                            placeholder="00000-0000000-0"
+                        >
+
+                    </div>
 
 
                     <!-- Phone -->
-                    <tr>
-                        <td>
-                            <label for="phone">Phone Number:</label>
-                        </td>
+                    <div class="field">
 
-                        <td>
-                            <input
-                                type="tel"
-                                id="phone"
-                                name="phone"
-                                pattern="03\d{9}"
-                                required
-                                placeholder="03000000000"
-                            >
-                        </td>
-                    </tr>
+                        <label for="phone">Phone Number:</label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            pattern="03\d{9}"
+                            required
+                            placeholder="03000000000"
+                        >
+
+                    </div>
 
 
                     <!-- Address -->
-                    <tr>
-                        <td>
-                            <label for="address">Address:</label>
-                        </td>
+                    <div class="field">
 
-                        <td>
-                            <textarea
-                                id="address"
-                                name="address"
-                                rows="4"
-                                cols="30"
-                                required
-                                placeholder="Enter address..."
-                            ></textarea>
-                        </td>
-                    </tr>
+                        <label for="address">Address:</label>
+
+                        <textarea
+                            id="address"
+                            name="address"
+                            rows="4"
+                            cols="30"
+                            required
+                            placeholder="Enter address..."
+                        ></textarea>
+
+                    </div>
 
 
                     <!-- Buttons -->
-                    <tr>
-                        <td colspan="2" align="center">
+                    <div class="form-buttons">
 
-                            <button
-                                type="submit"
-                                id="submit">
-                                Submit
-                            </button>
+                        <button type="submit" id="submit">
+                            Submit
+                        </button>
 
-                            <button
-                                type="button"
-                                id="clear-btn">
-                                Clear
-                            </button>
+                        <button type="button" id="clear-btn">
+                            Clear
+                        </button>
 
-                        </td>
-                    </tr>
+                    </div>
 
-                </table>
+                </fieldset>
 
             </form>
 
@@ -344,8 +342,11 @@
 
     <!-- Footer -->
     <footer>
+
         <p>&copy; 2026 Malik M Abdullah</p>
+
         <p>Built for CIT331</p>
+
     </footer>
 
 
