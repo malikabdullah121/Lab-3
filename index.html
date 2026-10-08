@@ -7,7 +7,7 @@
 
     <title>My Profile</title>
 
-    <!-- External CSS -->
+
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -169,11 +169,23 @@
                             Name:
                         </label>
 
+                    <legend>Send me a message</legend>
+
+
+                    <!-- Name -->
+                    <div class="field">
+
+                        <label for="name">Full Name:</label>
+
                         <input
                             type="text"
                             id="name"
                             name="name"
                             required>
+                            pattern="[A-Za-z ]+"
+                            required
+                            placeholder="NAME"
+                        >
 
                     </div>
 
@@ -190,6 +202,19 @@
                             id="email"
                             name="email"
                             required>
+                    <!-- Age -->
+                    <div class="field">
+
+                        <label for="age">Age:</label>
+
+                        <input
+                            type="number"
+                            id="age"
+                            name="age"
+                            min="0"
+                            max="120"
+                            placeholder="18"
+                        >
 
                     </div>
 
@@ -221,6 +246,17 @@
                             name="message"
                             rows="5"
                             required></textarea>
+                    <!-- Date of Birth -->
+                    <div class="field">
+
+                        <label for="dob">Date of Birth:</label>
+
+                        <input
+                            type="date"
+                            id="dob"
+                            name="dob"
+                            required
+                        >
 
                     </div>
 
@@ -247,6 +283,129 @@
 
                             Female
                         </label>
+                    <div class="field">
+
+                        <label>Gender:</label>
+
+                        <div class="radio-group">
+
+                            <label>
+                                <input
+                                    type="radio"
+                                    id="male"
+                                    name="gender"
+                                    value="Male"
+                                    required
+                                >
+                                Male
+                            </label>
+
+                            <label>
+                                <input
+                                    type="radio"
+                                    id="female"
+                                    name="gender"
+                                    value="Female"
+                                >
+                                Female
+                            </label>
+
+                            <label>
+                                <input
+                                    type="radio"
+                                    id="other"
+                                    name="gender"
+                                    value="Other"
+                                >
+                                Other
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Email -->
+                    <div class="field">
+
+                        <label for="email">Email Address:</label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            required
+                            placeholder="example@mail.com"
+                        >
+
+                    </div>
+
+
+                    <!-- Password -->
+                    <div class="field">
+
+                        <label for="password">Password:</label>
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            minlength="8"
+                            pattern="[A-Za-z0-9]{8}"
+                            required
+                            placeholder="At least 8 characters"
+                        >
+
+                    </div>
+
+
+                    <!-- CNIC -->
+                    <div class="field">
+
+                        <label for="cnic">CNIC Number:</label>
+
+                        <input
+                            type="text"
+                            id="cnic"
+                            name="cnic"
+                            pattern="\d{5}-\d{7}-\d{1}"
+                            required
+                            placeholder="00000-0000000-0"
+                        >
+
+                    </div>
+
+
+                    <!-- Phone -->
+                    <div class="field">
+
+                        <label for="phone">Phone Number:</label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            pattern="03\d{9}"
+                            required
+                            placeholder="03000000000"
+                        >
+
+                    </div>
+
+
+                    <!-- Address -->
+                    <div class="field">
+
+                        <label for="address">Address:</label>
+
+                        <textarea
+                            id="address"
+                            name="address"
+                            rows="4"
+                            cols="30"
+                            required
+                            placeholder="Enter address..."
+                        ></textarea>
 
                     </div>
 
@@ -272,6 +431,17 @@
 
                     </div>
 
+
+                        <button type="submit" id="submit">
+                            Submit
+                        </button>
+
+                        <button type="button" id="clear-btn">
+                            Clear
+                        </button>
+
+                    </div>
+
                 </fieldset>
 
             </form>
@@ -293,6 +463,9 @@
         <p>
             Built for CIT331
         </p>
+        <p>&copy; 2026 Malik M Abdullah</p>
+
+        <p>Built for CIT331</p>
 
     </footer>
 

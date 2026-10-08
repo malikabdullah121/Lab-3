@@ -63,6 +63,7 @@ h2 {
 
 
 /* Header */
+/* Class selector */
 .site-header {
     background: var(--brand-dark);
     color: #fff;
@@ -71,6 +72,7 @@ h2 {
 
 
 /* Header heading */
+/* Descendant + class selector */
 .site-header h1 {
     color: #fff;
     margin: 0;
@@ -78,6 +80,7 @@ h2 {
 
 
 /* Navigation links */
+/* Descendant selector */
 nav a {
     color: #fff;
     text-decoration: none;
@@ -86,6 +89,7 @@ nav a {
 
 
 /* Card */
+/* Class selector */
 .card {
     background: var(--surface);
     border: 1px solid var(--border);
@@ -93,12 +97,14 @@ nav a {
 
 
 /* About section */
+/* ID selector */
 #about {
     border-left: 4px solid var(--brand);
 }
 
 
 /* Form fieldset */
+/* Child selector */
 form > fieldset {
     border: 1px solid var(--border);
     border-radius: 8px;
@@ -112,6 +118,7 @@ h2 + p {
 
 
 /* Form inputs */
+/* Adjacent sibling selector */
 label + input,
 label + select,
 label + textarea {
@@ -122,6 +129,7 @@ label + textarea {
 
 
 /* Required fields */
+/* Required attribute selector */
 input[required],
 textarea[required] {
     border-left: 4px solid var(--accent);
@@ -129,12 +137,14 @@ textarea[required] {
 
 
 /* Email input */
+/* Type attribute selector */
 input[type="email"] {
     background: #f0f6ff;
 }
 
 
 /* Smooth transition */
+/* Transition */
 a,
 button {
     transition: background 0.2s, color 0.2s;
@@ -142,6 +152,7 @@ button {
 
 
 /* Link hover */
+/* Hover pseudo-class */
 a:hover {
     text-decoration: underline;
 }
@@ -155,6 +166,7 @@ nav a:hover {
 
 
 /* Input focus */
+/* Focus pseudo-class */
 input:focus,
 select:focus,
 textarea:focus {
@@ -182,6 +194,7 @@ textarea:focus {
 
 
 /* Before headings */
+/* Pseudo-element before heading */
 h2::before {
     content: "\00BB\00A0";
     color: var(--accent);
@@ -189,6 +202,7 @@ h2::before {
 
 
 /* Before blockquote */
+/* Pseudo-element before blockquote */
 blockquote::before {
     content: "\201C";
     font-size: 3rem;
@@ -200,6 +214,7 @@ blockquote::before {
 
 
 /* External links */
+/* External link selector */
 a[href^="http"]::after {
     content: " (external)";
     font-size: 0.8em;
